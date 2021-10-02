@@ -2,22 +2,28 @@ pipeline{
 agent any
 stages 
 {
+stage('Checkout') 
+{
+steps{
+echo "Cloning the Project.........."
+}
+}
 stage('Build') 
 {
 steps{
 echo "Building the Project.........."
 }
 }
-stage('Test') 
+stage('Analysys') 
 {
 steps{
-echo "Testing the Project.........."
+echo "Analysys the Project.........."
 }
 }
-stage('Deploy') 
+stage('Upload Artifact') 
 {
 steps{
-echo "Deploying the Project.........."
+echo "Upload the Artifact.........."
 }
 }
 }
